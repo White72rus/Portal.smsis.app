@@ -1,0 +1,76 @@
+
+nav {
+    width: 270px;
+}
+
+.accordion {
+    li {
+        height: auto;
+        display: block;
+        cursor: pointer;
+    }
+    li.active {
+        .menu-item {
+            background-color: var(--menu-item-hover-color);
+            color: var(--menu-font-hover-color);
+            border: solid 3px rgb(214, 214, 214);
+            border-width: 0 0 0 4px;
+        }
+    }
+}
+
+.submenu li {
+    height: auto;
+    display: block;
+    cursor: pointer;  
+    margin: 1px 0 1px 10px;
+}
+
+.submenu li a {
+    height: 35px;
+    display: flex;
+    padding: 0 0 0 10px;
+    align-items: center;
+    font: normal 0.9rem/normal Cosolas, sans-serif;
+    background-color: var(--submenu-item-color);
+    color: var(--submenu-font-color);
+    transition: background-color .5s cubic-bezier(.79,.14,.15,.86), color .5s cubic-bezier(.79,.14,.15,.86);
+    transition: border-width 0;
+    border: solid 3px var(--submenu-item-color);
+    border-width: 0 0 0 4px;
+    &:hover {
+        background-color: var(--submenu-item-hover-color);
+        color: var(--submenu-font-hover-color);
+        border-color: rgb(214, 214, 214);
+    }
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+    transition: all .5s cubic-bezier(.79,.14,.15,.86);
+}
+
+$marker: rgb(211, 69, 69);
+
+.open {
+    background-color: $marker;
+}
+
+.menu-item {
+    height: 40px;
+    padding: 0 0 0 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--base-color);
+    font: 200 1.3rem/normal "BasisGrotesquePro", Cosolas, sans-serif;
+    color: var(--menu-font-color);
+    transition: background-color .5s cubic-bezier(.79,.14,.15,.86), color .5s cubic-bezier(.79,.14,.15,.86);
+    border: solid 3px var(--base-color);
+    border-width: 0 0 0 4px;
+    &:hover {
+        background-color: var(--menu-item-hover-color);
+        color: var(--menu-font-hover-color);
+        border-color: rgb(214, 214, 214);
+    }
+}

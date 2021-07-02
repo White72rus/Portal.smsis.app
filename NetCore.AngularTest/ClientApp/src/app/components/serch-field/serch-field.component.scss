@@ -1,0 +1,32 @@
+.container {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 3rem;
+    width: 40rem;
+    border: solid 1px var(--serch-block);
+    border-radius: 3px 0 0 3px;
+    font: 400 1.5rem/normal "BasisGrotesquePro", Cosolas, sans-serif;
+    color: rgb(78, 78, 78);
+    padding: 0 10px;
+}
+
+button {
+    span {
+        color: rgb(115, 115, 115);
+        font-size: 1.7rem;
+    }
+}
+
+.submit {
+    height: 3rem;
+    width: 5rem;
+    border: solid 0 rgb(1,1,1);
+    border-radius: 0 3px 3px 0;
+    font: 200 1.3rem/normal "BasisGrotesquePro", Cosolas, sans-serif;
+    background-color: var(--serch-block);
+}

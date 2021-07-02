@@ -1,0 +1,24 @@
+<nav>
+    <ul class="accordion">
+        <li *ngFor="let menu of menus, let i = index"
+        [class.active]="menu.active"
+        >
+            <div class="menu-item" (click)="toggle(i)"
+            [routerLink]="[menu.route]"
+            >
+                <span class="icon-main-menu" [class]="menu.icon"></span>
+                {{menu.name}}
+                <span></span>
+                
+            </div>
+            <ul class="submenu" #submenu 
+            [ngStyle]="{'height.px' : open && menu.active ? submenu.scrollHeight : 0}"
+            [ngStyle]="{'height.px' : menu.active ? submenu.scrollHeight : 0}"
+            >
+                <li *ngFor="let submenu of menu.submenu">
+                    <a [routerLink]="[menu.route + '/' +submenu.route]">{{submenu.name}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

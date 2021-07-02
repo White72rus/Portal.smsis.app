@@ -1,0 +1,25 @@
+<div class="box scroll-bar">
+    <div class="tab-content">
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let item of TableHeader">{{item}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of data;
+                let index = index;
+                let odd = odd; 
+                let even = even">
+
+                    <td *ngFor="let j of TableElement" 
+                    [attr.id]="j"
+                    >{{i[j]}}</td>
+
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+</div>

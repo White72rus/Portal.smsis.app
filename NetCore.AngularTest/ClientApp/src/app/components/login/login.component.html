@@ -1,0 +1,24 @@
+<div class="login-container">
+    <form>
+      <div class="login-wrap">
+        <input
+        type="text"
+        class="login"
+        placeholder="Login"
+        [(ngModel)]="login"
+        (ngModelChange)="onChange('login')"
+        />
+        <span id="login" class="notice">{{loginNotice}}</span>
+        <input
+        type="password"
+        class="pass"
+        placeholder="Password"
+        [(ngModel)]="pass"
+        (ngModelChange)="onChange('pass')"
+        />
+        <span id="pass" class="notice">{{passNotice}}</span>
+        <button class="btn login-submit-btn" (click)="onLogin()">Войти</button>
+      </div>
+    </form>
+</div>
+

@@ -1,0 +1,32 @@
+<body>
+    <div class="body-wrapper">
+        <div class="sidebar"
+        [ngClass]="isClose ? 'is-close' : 'is-open'"
+        (mouseenter)="onMouseMoveSidebar($event)"
+        (mouseleave)="onMouseOutSidebar($event)"
+        >
+            <div class="logo">
+                <h1 
+                [ngClass]="isOpen ? 'logo-normal' : 'logo-smal'"
+
+                >SMSIS</h1>
+                <span class="sidebar-switch-btn icon-solid ico-angle-left" (click)="sidebarSwitch()"></span>
+            </div>
+            <app-main-menu [open]="isOpen"></app-main-menu>
+            <div class="sys-nav-menu">
+                <div id="" class="menu-item" #element (click)="toggle(element)"
+                [routerLink]="['account']">
+                    <span class="icon-solid icon-main-menu ico-angle-user"></span>
+                    Аккаунт
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <app-nav-menu></app-nav-menu>
+
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</body>
