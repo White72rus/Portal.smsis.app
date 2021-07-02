@@ -40,10 +40,6 @@ namespace NetCore.AngularTest {
                         builder.WithOrigins("http://tmn-web-smsis.ur.rt.ru", "http://localhost:50001", "https://localhost:50001")
                             .WithMethods("PUT", "DELETE", "POST", "GET")
                             .AllowAnyHeader();
-
-                        //builder.AllowAnyOrigin()
-                        //.AllowAnyMethod()
-                        //.AllowAnyHeader();
                     });
             });
         }

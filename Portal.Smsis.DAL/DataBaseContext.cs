@@ -8,12 +8,6 @@ namespace Portal.Smsis.DAL
 {
     public class DataBaseContext : DbContext
     {
-        //public DbSet<ImsEntity> Ims { get; set; }
-        //public DbSet<MssEntity> Mss { get; set; }
-        //public DbSet<UserEntity> Users { get; set; }
-        //public DbSet<ClaimEntity> Claims { get; set; }
-
-        
         public DbSet<NumberingByRegionEF> NumberingByRegionEF { get; set; }
 
         public DataBaseContext()
